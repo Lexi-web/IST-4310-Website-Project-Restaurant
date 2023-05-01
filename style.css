@@ -9,3 +9,18 @@
     background-position: center;
     height: 100vh;
 }
+
+
+img {height: auto;}
+
+input, button, select, textarea {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+
+.logo {
+    background: url(Images/Seafood-removebg-preview.png);
+    height: 100vh;
+}
