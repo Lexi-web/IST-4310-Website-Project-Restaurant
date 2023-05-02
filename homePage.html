@@ -6,27 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Beginning of website -->
-    <title>Seafood Moo</title>
-    <meta name="title" content="Seafood Moo">
-    <meta name="description" content="Delicious seafood for everyone">
-    <!-- Don't judge me for the restaurant name idk what to put -->
+    <title>Le Trident</title>
+    <meta name="title" content="Le Trident">
+    <meta name="description" content="Le Trident - Delicious seafood for everyone">
+
+    <!-- Favicon -->
 
     <!-- Google Font for website -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- Images or something put it here later -->
+    <!-- Preload Images -->
 
 </head>
 
 <body>
-    <!-- <section id="banner"> this is the picture that we can use but I commented it rn-->
+    <!-- <section id="banner"> this is the picture that we can use but I commented it rn
         
-    </section>
+    </section> -->
 
     <!-- Top Bar -->
     <div class="topbar">
@@ -46,22 +47,132 @@
                 
                 <div class="topbar-item item 2">
                     <div class="icon">
-                        <!-- ionicon is a website full of icons, use it here-->
+                        <ion-icon name="alarm-outline" aria-hidden="true"></ion-icon>
                     </div>
 
                     <span class="span">5:00pm - 11:00pm</span>
                 </div>
 
-                <a href="tel:" class="topbar-item">
+                <a href="tel:17603257175" class="topbar-item">
                     <div class="icon">
-                        <!-- put another iconicon thingy here -->
+                        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
                     </div>
                     
-                    <span class="span">1 760 325 7175</span>
+                    <span class="span">1 (760) 325 7175</span>
                 </a>
+
+                <div class="separator"></div>
+
+                <a href="mailto:LeTridenty@gmail.com" class="topbar-item">
+                    <div class="icon">
+                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+                    </div>
+                    
+                    <span class="span">LeTrident@gmail.com</span>
+                </a>
+
 
             </div>
         </div>
+
+    <!-- Header -->
+<header class="header" data-header>
+
+    <div class="container">
+
+    <a href="#" class="logo">
+        <img src="./Images/Seafood-removebg-preview.png" width="160" height="50" alt="Le Trident">
+    </a>
+
+    <nav class="navbar" data-navbar>
+            <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                <ion-icon name="close-outline" aria hidden="true"></ion-icon>
+            </button>
+
+            <a href="#" class="logo">
+                <!-- change the img src later cause that ain't it -->
+                <img src="./Images/Seafood-removebg-preview.png" width="160" height="50" alt="Le Trident - Home">
+            </a>
+
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="#home" class="navbar-link hover-underline active">
+                    <div class="separator"></div>
+
+                    <span class="span">Home</span>
+                </a>
+            </li>
+
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a href="#menu" class="navbar-link hover-underline active">
+                        <div class="separator"></div>
+    
+                        <span class="span">Menu</span>
+                    </a>
+                </li>
+            
+       <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="#about" class="navbar-link hover-underline active">
+                    <div class="separator"></div>
+
+                    <span class="span">About Us</span>
+                </a>
+            </li>
+
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="#chef" class="navbar-link hover-underline active">
+                    <div class="separator"></div>
+    
+                    <span class="span">Our Chefs</span>
+                </a>
+            </li>
+
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="#contact" class="navbar-link hover-underline active">
+                    <div class="separator"></div>
+    
+                    <span class="span">Contact</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="text-center">
+            <p class="headline-1 navbar-title">Visit Us</p>
+
+            <address class="body-4">
+                1234 Seafood Way, <br>
+                California, US
+            </address>
+        
+            <p class="body-4 navbar-text">Open: 5pm - 11pm</p>
+
+            <a href="mailto:LeTrident@gmail.com" class="sidebar-link">LeTrident@gmail.com</a>
+
+            <div class="separator"></div>
+
+            <p class="contact-label">Booking Request</p>
+
+            <a href="tel:170735261" class="body-1 contact-number hover-underline">170735261</a>
+        </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- JavaScript Link -->
+<script src="./javascript.js"></script>
+
+<!-- Ionicon Link -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 

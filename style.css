@@ -1,26 +1,115 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
-}
+} 
 
 #banner{
     background: url("Images/BeachRestaurant.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
+}   */
+
+
+/* CUSTOM PROPERTY */
+
+:root {
+    /* COLORS */
+
+color:aquamarine;
+color:cadetblue;
+color: floralwhite;
+color: black;
+
+
+
+/* GRADIENT COLOR */
+
+
+/* TYPOGRAPHY */
+
+/* Font Family */
+
+font-family: 'Quicksand', sans-serif;
+
+/* font weight */
+--weight-regular: 400;
+--weight-bold: 700;
+
+/* line height */
+
+/* letter spacing */
+
 }
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-img {height: auto;}
+li {list-style: none;}
 
-input, button, select, textarea {
+a,
+img,
+data,
+span,
+input,
+button,
+select,
+/* add ion-icon here */
+textarea { display: block; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {height:auto}
+
+input,
+button,
+select,
+textarea {
     background: none;
     border: none;
     font: inherit;
 }
 
-
-.logo {
-    background: url(Images/Seafood-removebg-preview.png);
-    height: 100vh;
+input,
+select,
+textarea {
+    width: 100;
+    outline: none;
 }
+
+button {cursor: pointer;}
+
+address {font-style: normal;}
+
+html {
+    font-size: 25px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: aquamarine;
+   /* background: url("Images/BeachRestaurant.png"); */
+    overflow: hidden;
+    height: 300vh;
+}
+
+
+body.loaded {overflow: overlay;}
+
+body.nav-active {overflow: hidden;}
+
+::-webkit-scrollbar {width: 5px;}
+
+::-webkit-scrollbar-track {background-color: transparent;}
+
+::-webkit-scrollbar-thumb {background-color: floralwhite;}
+
+.topbar {display: none};
