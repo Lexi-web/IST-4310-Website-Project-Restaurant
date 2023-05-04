@@ -40,6 +40,8 @@ font-family: 'Quicksand', sans-serif;
 
 /* letter spacing */
 
+--section-space: 70px;
+
 }
 
 *,
@@ -59,7 +61,7 @@ span,
 input,
 button,
 select,
-/* add ion-icon here */
+ion-icon, 
 textarea { display: block; }
 
 a {
@@ -95,9 +97,9 @@ html {
 }
 
 body {
-    background-color: aquamarine;
+    background-color: whitesmoke;
    /* background: url("Images/BeachRestaurant.png"); */
-    overflow: hidden;
+    overflow: hidden; 
     height: 300vh;
 }
 
