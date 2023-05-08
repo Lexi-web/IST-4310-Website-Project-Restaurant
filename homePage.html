@@ -1,194 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1">    
+    <title>Le Trident Restaurant Website</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Beginning of website -->
-    <title>Le Trident</title>
-    <meta name="title" content="Le Trident">
-    <meta name="description" content="Le Trident - Delicious seafood for everyone">
+    <!-- custom css file link -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- Favicon -->
-
-    <!-- Google Font for website -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="./style.css">
-
-    <!-- Preload Images -->
-
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
-
 <body>
-    <!-- <section id="banner"> this is the picture that we can use but I commented it rn
-        
-    </section> -->
+    <!-- Header section start -->
+    <header>
+        <a href="#" class="logo"><img src="./Images/Seafood-removebg-preview.png"></a>
 
-    <!-- Top Bar -->
-    <div class="topbar">
-        <div class="container">
-
-            <address class="topbar-item">
-                <div class="icon">
-                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-                </div>
-
-                <span class="span">
-                    1234 Seafood Lane, Monterey Bay, CA 
-                </span>
-            </address>
-
-            <div class="separator"></div>
-                
-                <div class="topbar-item item 2">
-                    <div class="icon">
-                        <ion-icon name="alarm-outline" aria-hidden="true"></ion-icon>
-                    </div>
-
-                    <span class="span">5:00pm - 11:00pm</span>
-                </div>
-
-                <a href="tel:17603257175" class="topbar-item">
-                    <div class="icon">
-                        <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-                    </div>
-                    
-                    <span class="span">1 (760) 325 7175</span>
-                </a>
-
-                <div class="separator"></div>
-
-                <a href="mailto:LeTridenty@gmail.com" class="topbar-item">
-                    <div class="icon">
-                        <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                    </div>
-                    
-                    <span class="span">LeTrident@gmail.com</span>
-                </a>
-
-
-            </div>
-        </div>
-
-    <!-- Header -->
-<header class="header" data-header>
-    <div class="container">
-
-    <a href="#" class="logo">
-        <img src="./Images/Seafood-removebg-preview.png" width="160" height="50" alt="Le Trident">
-    </a>
-
-    <nav class="navbar" data-navbar>
-            <button class="close-btn" aria-label="close menu" data-nav-toggler>
-                <ion-icon name="close-outline" aria hidden="true"></ion-icon>
-            </button>
-
-            <a href="#" class="logo">
-                <!-- change the img src later cause that ain't it -->
-                <img src="./Images/Seafood-removebg-preview.png" width="160" height="50" alt="Le Trident - Home">
-            </a>
-
-        <ul class="navbar-list">
-            <li class="navbar-item">
-                <a href="#home" class="navbar-link hover-underline active">
-                    <div class="separator"></div>
-
-                    <span class="span">Home</span>
-                </a>
-            </li>
-
-            <ul class="navbar-list">
-                <li class="navbar-item">
-                    <a href="#menu" class="navbar-link hover-underline active">
-                        <div class="separator"></div>
-    
-                        <span class="span">Menu</span>
-                    </a>
-                </li>
-            
-       <ul class="navbar-list">
-            <li class="navbar-item">
-                <a href="#about" class="navbar-link hover-underline active">
-                    <div class="separator"></div>
-
-                    <span class="span">About Us</span>
-                </a>
-            </li>
-
-        <ul class="navbar-list">
-            <li class="navbar-item">
-                <a href="#chef" class="navbar-link hover-underline active">
-                    <div class="separator"></div>
-    
-                    <span class="span">Our Chefs</span>
-                </a>
-            </li>
-
-        <ul class="navbar-list">
-            <li class="navbar-item">
-                <a href="#contact" class="navbar-link hover-underline active">
-                    <div class="separator"></div>
-    
-                    <span class="span">Contact</span>
-                </a>
-            </li>
-
-        </ul>
-
-        <div class="text-center">
-            <p class="headline-1 navbar-title">Visit Us</p>
-
-            <address class="body-4">
-                1234 Seafood Way, <br>
-                California, US
-            </address>
-        
-            <p class="body-4 navbar-text">Open: 5pm - 11pm</p>
-
-            <a href="mailto:LeTrident@gmail.com" class="sidebar-link">LeTrident@gmail.com</a>
-
-            <div class="separator"></div>
-
-            <p class="contact-label">Booking Request</p>
-
-            <a href="tel:170735261" class="body-1 contact-number hover-underline">
-                170735261
-            </a>
-        </div>
-
+        <nav class="navbar">
+            <a href="#home"  class="active">home</a>
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#team">team</a>
+            <a href="#reservation">reservation</a>
+            <a href="#blog">blog</a>
         </nav>
 
-    <a href="#" class="btn btn-secondary">
-        <span class="text text-1">Find A Table</span>
+        <div class="icons">
+            <i class="fas fa-bars" id="menu"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    <!-- Header section end -->
 
-        <span class="text text-2" aria-hidden="true">Find A Table</span>
-    </a>
+    <!-- slider section start -->
+    <div class="home" id="home">
+        <div class="home-slider">
+            <div class="wrapper">
+                <div class="slide slide1">
+                    <div class="content">
+                        <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
 
-    <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-    </button>
+                        <h3>Delicious Le Trident</h3>
+                        <h1>gift voucher</h1>
+                        <p>
+                            give a gift to friends and family!
+                        </p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
 
-    <div class="overlay" data-nav-toggler data-overlay></div>
+                <div class="slide slide2">
+                    <div class="content">
+                        <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
 
+                        <h3>Get 15% off grand opening</h3>
+                        <h1>the fresh</h1>
+                        <p>
+                            food restaurant
+                        </p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+
+                <div class="slide slide3">
+                    <div class="content">
+                        <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
+
+                        <h3>We are open</h3>
+                        <h1>fresh fish</h1>
+                        <p>
+                            you will love it
+                        </p>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- slider section ends -->
 
-</header>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-<!-- JavaScript Link -->
-<script src="./javascript.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 7500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
-<!-- Ionicon Link -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript">
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
 
+        menu.onclick = () =>{
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
 
+    </script>
 </body>
-
 </html>

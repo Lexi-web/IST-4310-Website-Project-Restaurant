@@ -1,117 +1,225 @@
-/* *{
-    margin: 0;
-    padding: 0;
-} 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-#banner{
-    background: url("Images/BeachRestaurant.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}   */
-
-
-/* CUSTOM PROPERTY */
-
-:root {
-    /* COLORS */
-
-color:aquamarine;
-color:cadetblue;
-color: floralwhite;
-color: black;
-
-
-
-/* GRADIENT COLOR */
-
-
-/* TYPOGRAPHY */
-
-/* Font Family */
-
-font-family: 'Quicksand', sans-serif;
-
-/* font weight */
---weight-regular: 400;
---weight-bold: 700;
-
-/* line height */
-
-/* letter spacing */
-
---section-space: 70px;
-
+:root
+{
+    --black: #333;
+    --light-color: #cdaa7c;
+    --box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1);
 }
-
-*,
-*::before,
-*::after {
+*
+{
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-li {list-style: none;}
-
-a,
-img,
-data,
-span,
-input,
-button,
-select,
-ion-icon, 
-textarea { display: block; }
-
-a {
-    color: inherit;
     text-decoration: none;
-}
-
-img {height:auto}
-
-input,
-button,
-select,
-textarea {
-    background: none;
     border: none;
-    font: inherit;
-}
-
-input,
-select,
-textarea {
-    width: 100;
     outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
 }
-
-button {cursor: pointer;}
-
-address {font-style: normal;}
-
-html {
-    font-size: 25px;
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
+/* navbar style start */
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 130px; /* I changed this part myself go back if needed to fix it */
+    background: var(--black);
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+}
+header .logo img
+{
+    height: 190px; /* Le Trident Logo */
+    object-fit: cover;
+    /* min-width: 190px;
+    background-size: 100% 100%; */
+}
+header .navbar a
+{
+    font-size: 1.7rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+    border: .1rem solid transparent;
+}
+header .navbar a.active,
+header .navbar a:hover 
+{
+    color: #fff;
+    border: .1rem solid rgba(205, 170, 124, 0.2);
+}
+header .icons i
+{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    background: var(--light-color);
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff; /* for the icons on the upper right side */
+}
+header .icons i:hover
+{
+    color: #fff;
+    background: var(--light-color);
+    transform: rotate(360deg); /*technically I don't need this so I may remove later */
+}
+header .icons #menu
+{
+    display: none;
+}
 
-body {
-    background-color: whitesmoke;
-   /* background: url("Images/BeachRestaurant.png"); */
-    overflow: hidden; 
-    height: 300vh;
+/* navbar style ends here */
+
+/* slider style start */
+.home .home-slider .slide 
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: flex-start;
+}
+.home .home-slider .slide1
+{
+    background: url(./Images/restaurants-in-newport-beach.jpg);
+}
+.home .home-slider .slide2 
+{
+    background: url(./Images/IMG-8418.jpg);
+}
+.home .home-slider .slide3
+{
+    background: url(./Images/ff071098-2549-4898-bf7c-4e21b5d4caa3.jpg);
+}
+.home .home-slider .slide1,
+.home .home-slider .slide2,
+.home .home-slider .slide3
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home .home-slider .slide .content
+{
+    text-align: center;
+    padding-left: 9rem;
+}
+.home .home-slider .slide .content h3 
+{
+    color: var(--light-color);
+    font-size: 3rem;
+    font-weight: 300;
+}
+.home .home-slider .slide .content h1
+{
+    color: #fff;
+    font-size: 8rem;
+}
+.home .home-slider .slide .content p 
+{
+    color: #e6e7e7;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+    line-height: 1.5;
+    font-weight: 200;
+}
+.btn 
+{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    border: .1rem solid rgba(205, 170, 124, 0.2);
+    background: transparent;
+    cursor: pointer;
+    padding: .8rem 3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.btn::before
+{
+    content:'';
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: .5s;
+}
+.btn:hover.btn::before
+{
+    left: 0;
 }
 
 
-body.loaded {overflow: overlay;}
+/* slider style end */
 
-body.nav-active {overflow: hidden;}
-
-::-webkit-scrollbar {width: 5px;}
-
-::-webkit-scrollbar-track {background-color: transparent;}
-
-::-webkit-scrollbar-thumb {background-color: floralwhite;}
-
-.topbar {display: none};
+/* media query */
+@media (max-width: 991px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+    header
+    {
+        padding: 1rem 2rem;
+    }
+    header .logo img
+    {
+        height: 7rem;
+    }
+}
+@media (max-width: 768px)
+{
+    /* navbar media query */
+    header .logo img 
+    {
+        height: 7rem;
+    }
+    header .icons #menu
+    {
+        display: inline-block;
+    }
+    header .navbar
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(205, 170, 124, 0.2);
+        border-bottom: .1rem solid rgba(205, 170, 124, 0.2);
+        padding: 1rem;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    header .navbar.active
+    {
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    header .navbar a 
+    {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--black);
+    }
+}
