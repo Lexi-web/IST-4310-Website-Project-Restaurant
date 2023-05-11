@@ -38,9 +38,9 @@
 
     <!-- slider section start -->
     <div class="home" id="home">
-        <div class="home-slider">
-            <div class="wrapper">
-                <div class="slide slide1">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper wrapper">
+                <div class="swiper-slide slide slide1">
                     <div class="content">
                         <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
 
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="slide slide2">
+                <div class="swiper-slide slide slide2">
                     <div class="content">
                         <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
 
@@ -66,7 +66,7 @@
                     </div>
                 </div>
 
-                <div class="slide slide3">
+                <div class="swiper-slide slide slide3">
                     <div class="content">
                         <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
 
@@ -79,16 +79,27 @@
                     </div>
                 </div>
             </div>
+
+            <div class="swiper-pagination"></div>
         </div>
     </div>
-    <!-- slider section ends -->
+  <!-- slider section ends -->
+
+    <section class="welcome" id="about">
+        <h1 class="heading">WELCOME TO LE TRIDENT</h1>
+        <center><h3 class="sub-heading"> ~ Luxury & Quality ~ </h3></center>
+
+        <div class="box-container">
+            <div class="box"></div>
+        </div>
+    </section>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".home-slider", {
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: {
@@ -97,12 +108,9 @@
       },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,
+        clickable: false,
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      loop:true,
     });
   </script>
 
@@ -113,7 +121,7 @@
         menu.onclick = () =>{
             menu.classList.toggle('fa-times');
             navbar.classList.toggle('active');
-        }
+        } 
 
     </script>
 </body>

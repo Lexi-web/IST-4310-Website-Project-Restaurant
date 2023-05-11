@@ -38,6 +38,7 @@ header
     align-items: center;
     justify-content: space-between;
     box-shadow: var(--box-shadow);
+    z-index: 10000;
 }
 header .logo img
 {
@@ -167,7 +168,13 @@ header .icons #menu
 {
     left: 0;
 }
-
+.swiper-pagination-bullet
+{
+    background: var(--light-color)!important; /* The important keyword makes the bottom dots same color*/
+    width: 15px!important;
+    height: 15px!important;
+    border-radius: 0!important;
+}
 
 /* slider style end */
 
@@ -222,4 +229,19 @@ header .icons #menu
         font-size: 2rem;
         background: var(--black);
     }
+
+    /* slider media query */
+.home .home-slider .slide 
+{
+    justify-content: center;
+    height: 80vh;
+}
+.home .home-slider .slide .content
+{
+    padding: 0;
+}
+.home .home-slider .slide .content h1 
+{
+    font-size: 7rem;
+}
 }
