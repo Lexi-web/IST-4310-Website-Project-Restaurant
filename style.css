@@ -176,7 +176,85 @@ header .icons #menu
     border-radius: 0!important;
 }
 
+
 /* slider style end */
+
+/* welcome style start */
+section
+{
+    padding: 8rem 9%;
+}
+.heading
+{
+    text-align: center;
+    color: var(--black);
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+.sub-heading
+{
+    text-align: center;
+    color: var(--light-color);
+    font-size: 2.5rem;
+    padding: .5rem 2rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    background: var(--black);
+    display: inline-block;
+}
+
+.welcome .box-container
+{
+    display: flex;
+    gap: 1.5rem;
+}
+.welcome .box-container .box 
+{
+    width: 33%;
+    background: var(--black);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding-bottom: 1%;
+}
+.welcome .box-container .box .image
+{
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.welcome .box-container .box .image img 
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.welcome .box-container .box .image:hover img 
+{
+    transform: scale(1.1);
+}
+.welcome .box-container .box .content
+{
+    padding: 2rem;
+    padding-top: 2rem;
+}
+.welcome .box-container .box .content h3 
+{
+    color: var(--light-color);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.welcome .box-container .box .content p 
+{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+/* welcome style end */
 
 /* media query */
 @media (max-width: 991px)
@@ -244,4 +322,16 @@ header .icons #menu
 {
     font-size: 7rem;
 }
+
+/* welcome section */
+
+.welcome .box-container
+{
+    flex-wrap: wrap;
+}
+.welcome .box-container .box 
+{
+    width: 100%;
+}
+
 }
