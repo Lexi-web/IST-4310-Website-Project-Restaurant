@@ -123,20 +123,27 @@ header .icons #menu
     color: var(--light-color);
     font-size: 3rem;
     font-weight: 300;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, .5);
+    padding: 20px; 
+    width: 400px;
+    height: 75px;
 }
 .home .home-slider .slide .content h1
 {
     color: #fff;
     font-size: 8rem;
+    text-shadow: 2px 2px 4px #000000
 }
 .home .home-slider .slide .content p 
 {
     color: #e6e7e7;
-    font-size: 1.8rem;
+    font-size: 3rem;
     letter-spacing: 1px;
     padding: .5rem 0;
     line-height: 1.5;
-    font-weight: 200;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px #000000
 }
 .btn 
 {
@@ -256,6 +263,100 @@ section
 }
 /* welcome style end */
 
+/* our-menu style start */
+.our-menu {
+/*{*/
+    background: var(--black);
+   /* background: url(our-menu-bg-1.png) left top no-repeat, url(our-menu-bg-3.jpg); IDK ID I WANNA USE THIS */
+} 
+.our-menu .menu-container
+{
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(50rem,2fr));
+    gap: 5rem 10rem;
+}
+.our-menu .menu-container .item .item-name
+{
+    display: flex;
+    height: 60px; /* adjusts heights for the names on menu like main course, drinks, etc. */
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: .5rem;
+}
+.our-menu .menu-container .item .menu-item 
+{
+    padding: rem 0;
+}
+.our-menu .menu-container .item .item-name h2 
+{
+    font-size: 3rem;
+    color: #e5e5e5;
+    font-weight: 300;
+}
+.our-menu .menu-container .item .item-menu h3 
+{
+    font-size: 2rem;
+    color: #e5e5e5;
+    font-weight: 200;
+    display: inline-block;
+}
+.our-menu .menu-container .item .item-menu span 
+{
+    width: 37%;
+    display: inline-block;
+    border: 1px dotted #e5e5e5;
+}
+.our-menu .menu-container .item .item-menu ul 
+{
+    display: flex;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: .8rem 0;
+    font-weight: 200;
+}
+.our-menu .menu-container .item .item-menu ul li a 
+{
+    color: #b9b9b9;
+}
+
+/* our-menu style ends */
+
+/* our chef style start */
+.our-chef
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid-gap: 1.5rem;
+}
+.our-chef .item .image img 
+{
+  object-fit: cover;
+  width: 320px;
+  height: 400px;
+}
+.our-chef .item 
+{
+    position: relative;
+    z-index: 2;
+   /* overflow: hidden; */
+}
+.our-chef .item::before
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 5
+}
+/* our chef style ends */
+
+
+
 /* media query */
 @media (max-width: 991px)
 {
@@ -270,6 +371,14 @@ section
     header .logo img
     {
         height: 7rem;
+    }
+    .our-menu .menu-container
+    {
+        grid-template-columns: repeat(auto-fit, minmax(30rem,2fr));
+    }
+    .our-menu .menu-container .item .item-menu span 
+    {
+        width: 15%;
     }
 }
 @media (max-width: 768px)
