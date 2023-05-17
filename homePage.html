@@ -24,7 +24,6 @@
             <a href="#menu">menu</a>
             <a href="#team">team</a>
             <a href="#reservation">reservation</a>
-            <a href="#blog">blog</a>
         </nav>
 
         <div class="icons">
@@ -44,7 +43,7 @@
                     <div class="content">
                         <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
 
-                        <h3>Delicious Le Trident</h3>
+                        <h3 style="padding: 5px 50px 60px 120px;">Delicious Le Trident</h3>
                         <h1>gift voucher</h1>
                         <p>
                             give a gift to friends and family!
@@ -71,7 +70,7 @@
                         <img src="./Images/Seafood-removebg-preview.png" width= "150" height="150">
 
                         <h3>We are open</h3>
-                        <h1>fresh fish</h1>
+                        <h1>scenic views</h1>
                         <p>
                             you will love it
                         </p>
@@ -149,28 +148,24 @@
 
                 <div class="item-body">
                     <div class="item-menu">
-                        <h3>Super-Delicious Zuppa Toscana</h3>
+                        <h3>Glazed Salmon</h3>
                         <span class="dots"></span>
-                        <h3>$40</h3>
+                        <h3>$25</h3>
 
                         <ul>
-                            <li><a href="#">Chicken</a></li>
-                            <li><a href="#">Italian</a></li>
-                            <li><a href="#">Sausage</a></li>
-                            <li><a href="#">Spinach</a></li>
+                            <li><a href="#">Served with a side of green beans</a></li>
+                            
                         </ul>
                     </div>
 
                     <div class="item-menu">
-                        <h3>Super-Delicious Zuppa Toscana</h3>
+                        <h3>Shrimp Cocktail</h3>
                         <span class="dots"></span>
                         <h3>$26</h3>
 
                         <ul>
-                            <li><a href="#">Mushrooms</a></li>
-                            <li><a href="#">Italian</a></li>
-                            <li><a href="#">Sausage</a></li>
-                            <li><a href="#">Spinach</a></li>
+                            <li><a href="#">Made with our world famous cocktail sauce</a></li>
+                           
                         </ul>
                     </div>
 
@@ -361,6 +356,44 @@
 </section>
 <!-- our team section ends -->
 
+<!-- order section start -->
+<div class="reservation" id="reservation">
+    <div class="image">
+
+    </div>
+
+    <div class="form">
+        <h1 class="heading">book a table</h1>
+        <center><h3 class="sub-heading">~ check out our place ~</h3></center>
+
+        <form>
+            <div class="form-holder">
+                <div>
+                    <select>
+                        <option>1 person</option>
+                        <option>2 people</option>
+                        <option>3 people</option>
+                        <option>4 people</option>
+                    </select>
+
+                    <input type="text" name="" placeholder="Time">
+                    <input type="text" name="" placeholder="Phone">
+                </div>
+
+                <div>
+                    <input type="text" name="" placeholder="Date">
+                    <input type="text" name="" placeholder="Name">
+                    <input type="email" name="" placeholder="email">
+                </div>
+            </div>
+            <center><a href="#" class="btn">Book now</a></center>
+        </form>
+    </div>
+</div>
+<!-- order section ends-->
+
+
+
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -375,7 +408,7 @@
       },
       pagination: {
         el: ".swiper-pagination",
-        clickable: false,
+        clickable: true,
       },
       loop:true,
     });
