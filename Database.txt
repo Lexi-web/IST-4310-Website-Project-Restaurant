@@ -1,0 +1,77 @@
+
+DROP DATABASE IF EXISTS menu;
+CREATE DATABASE IF NOT EXISTS menu;
+USE menu;
+
+SELECT 'CREATING DATABASE STRUCTURE' as 'INFO';
+
+DROP TABLE IF EXISTS menu,
+                     orders, 
+                     chefs;
+
+/*!50503 set default_storage_engine = InnoDB */;
+/*!50503 select CONCAT('storage engine: ', @@default_storage_engine) as INFO */;
+
+
+
+CREATE TABLE menu (
+	
+    itemNum      INT         NOT NULL,
+    menuItem     VARCHAR(29) NOT NULL,
+    itemPrice    INT         NOT NULL,
+
+    PRIMARY KEY (itemNum);
+);
+
+
+CREATE TABLE orders (
+    orderNum	INT             NOT NULL,
+    menuItem      CHAR(20)        NOT NULL,
+    pickupName    CHAR(10)        NOT NULL,
+    pickUp        DATE            NOT NULL,
+    FOREIGN KEY (menuItem)  REFERENCES menu   (menuItem)  ON DELETE CASCADE,
+    PRIMARY KEY (orderNum,menuItem);
+);
+
+CREATE TABLE chefs (
+    chef_no     INT             NOT NULL,
+    firstName   VARCHAR(100)     NOT NULL,
+    firstName   VARCHAR(100)     NOT NULL,
+    from_date   DATE            NOT NULL,
+
+    PRIMARY KEY (chef_no, from_date);
+) 
+; 
+
+flush /*!50503 binary */ logs;
+
+-- SELECT 'LOADING menu' as 'INFO';
+-- source "C:\\Downloads\\test_db\\load_departments.dump";
+INSERT INTO `menu` VALUES 
+('1','GlazedSalmon','29.99'),
+('2','ShrimpCocktail','15.55),
+('3','SeaBass','16.66),
+('4','MediterraneanSalad,'10.89'),
+('5','ClamChowder','8.99'),
+('6','FrenchOnion Soup','10.00'),
+('7','Water','2.00'),
+('8','Coffee','4.00'),
+('9','Wine','3.00'),
+('10','StrawberrySmoothie','5.00'),
+('11','ChocolateCake','20.00'),
+('12','FreshBlueberrySorbet','7.00');
+
+
+-- SELECT 'LOADING chefs' as 'INFO';
+-- source load_chefs.dump ;
+INSERT INTO `chefs` VALUES 
+('1','Gordon','Ramsay','2022-06-26'),
+('2','Guy','Fieri,'2022-08-24')
+('3','Bobbly', 'Flay', '2023-01-15');
+
+-- source show_elapsed.sql ;
+
+select timediff(
+    (select update_time from information_schema.tables where table_schema='employees' and table_name='salaries'),
+    (select create_time from information_schema.tables where table_schema='employees' and table_name='employees')
+) as data_load_time_diff;
